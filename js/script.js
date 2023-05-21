@@ -406,15 +406,20 @@ function fillTemplate() {
     // Perspective
         perspectiveTemplate += (perspectives[Math.floor(Math.random() * perspectives.length)]);
         newDiv.appendChild(document.createTextNode(perspectiveTemplate));
-        newDiv.appendChild(document.createElement("br"));
 
-    document.body.insertBefore(newDiv, document.getElementById("footer"));
+    document.body.insertBefore(newDiv, document.getElementById("footer"))
+    document.body.insertBefore(document.createElement("br"), document.getElementById("footer"));
 }
 
 function reset() {
     var bears = document.getElementsByClassName("bear");
+    var breaks = document.getElementsByTagName("br");
 
     while (bears[0]) {
         bears[0].parentNode.removeChild(bears[0]);
+    }
+
+    while (breaks[0]) {
+        breaks[0].parentNode.removeChild(breaks[0]);
     }
 }
