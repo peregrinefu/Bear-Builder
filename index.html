@@ -2,16 +2,27 @@
 <html>
     <head>
         <title>Bear Builder</title>
+        <link rel="icon" type="image/x-icon" href="assets\favicon.ico">
+
         <link rel="stylesheet" href="stylesheet.css">
         <script src="js/script.js"></script>
     </head>
 
     <body>
         <div class="shell">
-            <label style="font-size:16px" for="quantity">Number of Bears to Generate:</label>
-            <input type="number" id="quantity" name="quantity" value="1" min="1" max="99">
-            <br>
-            <input style="display:block; margin:auto;" type="button" value="Go!" onclick="generateBears()">
+            <div class="inputContainer">
+                <label style="font-size:16px" for="quantity">Number of Bears to Generate:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="99">
+            </div>
+
+            <div class="inputContainer">
+                <label style="font-size:16px" for="speciesToggle">Include Species</label>
+                <input type="checkbox" id="speciesToggle" name="speciesToggle" value="species">
+            </div>
+            
+            <div class="inputContainer">
+                <input type="button" value="Go!" onclick="generateBears()">
+            </div>
         </div>
 
         <div class="footer" id="footer">© 2023 Peregrine Fu</div>

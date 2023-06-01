@@ -1,6 +1,334 @@
 const chaosChance = 6;
+const realChaosChance = 50;
 
-const species           = [ ];
+const species           = [ "Baby Blue Bear",
+                            "Bearemy",
+                            "Birthday Treat Bears",
+                            "Black Bear",
+                            "Blue Bear",
+                            "Blue Fluffy Bear",
+                            "Chubby Cubby",
+                            "Cocoa Cuddles Bear",
+                            "Colourful Peace Bear",
+                            "Coral Bear",
+                            "Cozy Cuddles Teddy",
+                            "Crayola Bear",
+                            "Curly Bear",
+                            "Festive Fun Panda",
+                            "Green Bear-lien",
+                            "Happy Hugs",
+                            "Hearts 'n' Hugs Teddy",
+                            "Hockey Bear",
+                            "Kabu Bearnard",
+                            "Lavender Bear",
+                            "Lil' Cub Brownie",
+                            "Lil' Cub Pudding",
+                            "Mer-Bear",
+                            "Mint Bear",
+                            "Night Sky Teddy",
+                            "Ocean Treasure Bear",
+                            "Pastel Bear Fairy Friend",
+                            "Pastel Bouquet Bear",
+                            "Pink Bouquet Bear",
+                            "Pink Cuddles Teddy",
+                            "Polar Bear",
+                            "Pumpkin Glow Bear",
+                            "Pumpkin Spice Bear",
+                            "Purple Bear-lien",
+                            "Rainbow Bear",
+                            "Rainbow Friends Bear",
+                            "Rainbow Panda",
+                            "Rainbow Sparkle Bear",
+                            "Read Teddy",
+                            "Silver Celebration Bear",
+                            "Sparkle Panda",
+                            "Swarovski Crystal Bear",
+                            "Sweet Dreams Bear",
+                            "Timeless Teddy",
+                            "White Bouquet Bear",
+                            "Yellow Bouquet Bear",
+                            "Yellow-Tie-Dye Bear",
+                            "Zombear",
+                            "Hot Topic Bear",
+                            "Floral Pawlette",
+                            "Flower Power Floral Bunny",
+                            "Gentle Cuddles Bunny",
+                            "Kabu Pawlette",
+                            "Pastel Swirl Pawlette",
+                            "Pawlette",
+                            "Pink Pawlette",
+                            "Polka Dot Pawlette",
+                            "Sugar Plum Bunny",
+                            "Green Frog",
+                            "Hoppy Swirls Frog",
+                            "Jolly Jumps Frog",
+                            "Mer-Frog",
+                            "Purple Frog",
+                            "Spring Pink Frog",
+                            "Teal Frog",
+                            "Toadally Tie-Dye Pink Frog",
+                            "Blueberry Cow",
+                            "Christmas Cow",
+                            "Longhorn Cow",
+                            "Strawberry Cow",
+                            "Arctic Pink Reindeer",
+                            "Glacial Glisten",
+                            "Grey Gust Moose",
+                            "Maple Leaf Moose",
+                            "Santa's Reindeer",
+                            "Snow Magical Glisten",
+                            "Snowflake Swirl Glisten",
+                            "Winter Wishes Moose",
+                            "Barkleigh",
+                            "Bernese Mountain Dog",
+                            "Black Labrador",
+                            "Brown 'n' White Puppy",
+                            "German Shepherd",
+                            "Hearts For You Pup",
+                            "Labradoodle",
+                            "Mutt",
+                            "Wolf Pup",
+                            "Black Halloween Cat",
+                            "Brown Striped Kitty",
+                            "Floppy Kitty",
+                            "Grey 'n' White Kitty",
+                            "Kabu Catlyn",
+                            "Mer-Cat",
+                            "Pastel Swirl Kitty",
+                            "Purple Magic Halloween Cat",
+                            "Rainbow Friends Cat",
+                            "Rainbow Kittycorn",
+                            "Sassy Cat",
+                            "Snow Leopard",
+                            "Lavender Axolotl",
+                            "Mint Axolotl",
+                            "Pink Axolotl",
+                            "Rainbow Axolotl",
+                            "Tie-Dye Axolotl",
+                            "Candy Cane Unicorn",
+                            "Candy Corn Unicorn",
+                            "Colour Craze Unicorn",
+                            "Fairy Friends Enchanted Unicorn",
+                            "Fairy Friends Magic Unicorn",
+                            "Pink Llamacorn",
+                            "Rainbow Unicorn",
+                            "Red Fairy Berry Unicorn",
+                            "Swirl Unicorn",
+                            "Tie-Dye Unicorn",
+                            "White Fairy Berry Unicorn",
+                            "Blue T-Rex",
+                            "Fairy Friends Enchanted Dragon",
+                            "Fairy Berry Dragon",
+                            "Red Raptor",
+                            "Triceratops",
+                            "Apatosaurus",
+                            "Rainbow Hearts Triceratops",
+                            "Carnotaurus",
+                            "Bubble Shark",
+                            "Dolphin",
+                            "Great White Shark",
+                            "Heartwarming Hippo",
+                            "Mystical Narwhal",
+                            "Otter",
+                            "Otterly Adorable Otter",
+                            "Pink Otter",
+                            "Rainbow Octopus",
+                            "Sea Splash Dolphin",
+                            "Seahorsicorn",
+                            "Seal",
+                            "Shark Week Tiger Shark",
+                            "Starfish",
+                            "Arctic Pink Fox",
+                            "Blue Peep",
+                            "Brown Sloth",
+                            "Fancy Flamingo",
+                            "Fox",
+                            "Icy Blue Penguin",
+                            "Lucky Ducky",
+                            "Opossum",
+                            "Orange Peep",
+                            "Palomino Horse",
+                            "Pink Frost Fox",
+                            "Pink Peep",
+                            "Pink Sloth",
+                            "Pinky Pig",
+                            "Raccoon",
+                            "Red Hearts Monkey",
+                            "Red Panda",
+                            "Smiley Monkey",
+                            "Squirrel",
+                            "Turquoise Peep",
+                            "Wild Hearts Monkey",
+                            "Wooly Cute Alpaca",
+                            "Yellow Confetti Peep",
+                            "\"Oh, the Places You'll Go!\" Bear",
+                            "Alpha Lexa",
+                            "Beetlejuice Bear",
+                            "Beta",
+                            "Branch",
+                            "Chase",
+                            "Cinnamoroll",
+                            "Combo Panda",
+                            "Doctor Who Bear",
+                            "Dungeons & Dragons Dragon",
+                            "E.T.",
+                            "Eeyore",
+                            "FRIENDS Bear",
+                            "Gidget",
+                            "Grinch",
+                            "Gus the Gummy Gator",
+                            "Hello Kitty",
+                            "Hidden World Toothless",
+                            "Jack Skellington Bear",
+                            "Liberty",
+                            "Lord of the Rings Bear",
+                            "Love, Diana Bear",
+                            "Minion Bob",
+                            "Minion Kevin",
+                            "Minion Otto",
+                            "Miraculous Ladybug Bear",
+                            "Oogie Boogey",
+                            "Phoenix Force Bear",
+                            "PJ Masks Bear",
+                            "Pooh Bear",
+                            "Poppy",
+                            "Puss In Boots",
+                            "Red Panda Mei",
+                            "Sally Bear",
+                            "Scooby-Doo",
+                            "Skye",
+                            "Snoopy",
+                            "T-Rex (Jurassic World)",
+                            "Tigger",
+                            "Toothless",
+                            "WeWearCute Bear",
+                            "Zero",
+                            "Shrek",
+                            "Shrek Baby",
+                            "The Flash Bear",
+                            "Captain Marvel Bear",
+                            "Light Fury",
+                            "Thomas the Tank Engine Bear",
+                            "Alolan Vulpix",
+                            "Bulbasaur",
+                            "Charmander",
+                            "Dragonite",
+                            "Eevee",
+                            "Espeon",
+                            "Flareon",
+                            "Gengar",
+                            "Glaceon",
+                            "Grookey",
+                            "Growlithe",
+                            "Jigglypuff",
+                            "Jolteon",
+                            "Leafeon",
+                            "Meowth",
+                            "Mew",
+                            "Pichu",
+                            "Pikachu",
+                            "Piplup",
+                            "Psyduck",
+                            "Scorbunny",
+                            "Snorlax",
+                            "Snubble",
+                            "Sobble",
+                            "Squirtle",
+                            "Sylveon",
+                            "Teddiursa",
+                            "Umbreon",
+                            "Vaporeon",
+                            "Vulpix",
+                            "Keely",
+                            "Misha",
+                            "Risa",
+                            "Stella",
+                            "Teegan",
+                            "Viv",
+                            "Bantha",
+                            "Boba Fett Bear",
+                            "Darth Vader Bear",
+                            "Grogu",
+                            "Holiday Grogu",
+                            "Jawa Bear",
+                            "Mandalorian",
+                            "Rancor",
+                            "Rey Bear",
+                            "Summer Grogu",
+                            "Wampa",
+                            "Buckbeak",
+                            "Dobby",
+                            "Fawkes",
+                            "Gryffindor Lion",
+                            "Harry Potter Bear",
+                            "Hedwig",
+                            "Niffler",
+                            "Otter Patronus",
+                            "Ravenclaw Raven",
+                            "Slytherin Snake",
+                            "Stag Patronus",
+                            "Bowser",
+                            "Isabelle",
+                            "K.K. Slider",
+                            "Sonic (Sonic 2)",
+                            "Sonic the Hedgehog",
+                            "Tails",
+                            "Tom Nook",
+                            "100th Anniversary Stitch",
+                            "Aladdin Bear",
+                            "Aloha Christmas Stitch",
+                            "Anna-Inspired Bear",
+                            "Ariel Bear",
+                            "Baby Groot",
+                            "Black Panther Bear",
+                            "Black Widow Bear",
+                            "Disney Princess Bear",
+                            "Doctor Strange Bear",
+                            "Elsa-Inspired Bear (New)",
+                            "Elsa-Inspired Bear (Old)",
+                            "Genie Bear",
+                            "Jasmine Bear",
+                            "Mike Wazowski",
+                            "Olaf (Current)",
+                            "Olaf (Recalled)",
+                            "Pumba",
+                            "Shuri Bear",
+                            "Simba",
+                            "Spider-Man Bear",
+                            "Spooky Fun Stitch",
+                            "Spring Tie-Dye Stitch",
+                            "Stitch",
+                            "Sulley (Current)",
+                            "Sulley (Recalled)",
+                            "Ursula Bear",
+                            "Valentine's Stitch",
+                            "Vision Bear",
+                            "Young Nala",
+                            "Rainbow Dash",
+                            "Pinkie Pie",
+                            "Fluttershy",
+                            "Princess Twilight Sparkle",
+                            "Applejack",
+                            "Rarity",
+                            "Trixie",
+                            "Applebloom",
+                            "Sweetie Belle",
+                            "Scootaloo",
+                            "Princess Celestia",
+                            "Zecora",
+                            "Princess Cadance",
+                            "Shining Armor",
+                            "Princess Luna",
+                            "DJ Pon-3",
+                            "Muffins",
+                            "Minty",
+                            "Starlight Glimmer",
+                            "Big McIntosh",
+                            "Cheerilee",
+                            "Sunset Shimmer",
+                            "Songbird Serenade",
+                            "Tempest Shadow",
+                            "Ohio State Brutus"];
 const preoccupations    = [ "Hygiene",
                             "Fine dining",
                             "Comfort",
@@ -273,7 +601,8 @@ const perspectives      = [ "a terrifying place, with monsters around every corn
                             "waiting for me with open arms.",
                             "a series of miracles.",
                             "entirely edible, probably.",
-                            "a beautiful disaster."];
+                            "a beautiful disaster.",
+                            "a richer place with me in it."];
 const demeanors         = [ "Cheerful",
                             "Grumpy",
                             "Flirty",
@@ -288,7 +617,7 @@ const demeanors         = [ "Cheerful",
                             "Jockish",
                             "Jocular",
                             "Obnoxious",
-                            "Itchy",];
+                            "Itchy"];
 const fillings          = [ "Rice",
                             "Sponges",
                             "Beans",
@@ -314,7 +643,43 @@ const fillings          = [ "Rice",
                             "Gravel",
                             "Leaves",
                             "Straw",
-                            "Chain links",];
+                            "Chain links",
+                            "Blood and organs and stuff",
+                            "Almond flour",
+                            "Crumpled newspaper",
+                            "Shredded legal documents",
+                            "Children's mittens",
+                            "Bubble wrap",
+                            "Packing peanuts",
+                            "Orbeez",
+                            "Scraps of faux fur",
+                            "Live worms",
+                            "Paperclips",
+                            "Assorted vines and ivies",
+                            "Water-filled bladders",
+                            "A purpose-built endoskeleton"];
+
+var preoccupationsTemplate;
+var phobiasTemplate;
+var prejudiceTemplate;
+var purposeTemplate;
+var perspectiveTemplate;
+var speciesTemplate;
+var demeanorTemplate;
+var fillingTemplate;
+
+var preoccupationGeneratedFirst;
+var preoccupationGeneratedSecond;
+var phobiaGeneratedFirst;
+var phobiaGeneratedSecond;
+
+var chaosCheck1;
+var chaosCheck2;
+var chaosCheck3;
+var chaosCheck4;
+
+var realChaosCheck;
+var speciesCheck;
 
 function generateBears() {
     reset();
@@ -326,27 +691,41 @@ function generateBears() {
 }
 
 function fillTemplate() {
-    var preoccupationsTemplate = "Preoccupations: ";
-    var phobiasTemplate = "Phobias: ";
-    var prejudiceTemplate = "Prejudice: ";
-    var purposeTemplate = "Purpose: ";
-    var perspectiveTemplate = "Perspective: The world is ";
-    var speciesTemplate = "Species: ";
-    var demeanorTemplate = "Demeanor: ";
-    var fillingTemplate = "Filling: ";
+    preoccupationsTemplate = "Preoccupations: ";
+    phobiasTemplate = "Phobias: ";
+    prejudiceTemplate = "Prejudice: ";
+    purposeTemplate = "Purpose: ";
+    perspectiveTemplate = "Perspective: The world is ";
+    speciesTemplate = "Species: ";
+    demeanorTemplate = "Demeanor: ";
+    fillingTemplate = "Filling: ";
 
+    /*
     var preoccupationGeneratedFirst;
     var preoccupationGeneratedSecond;
     var phobiaGeneratedFirst;
     var phobiaGeneratedSecond;
+    */
     
-    var chaosCheck1 = Math.floor(Math.random() * chaosChance);
-    var chaosCheck2 = Math.floor(Math.random() * chaosChance);
-    var chaosCheck3 = Math.floor(Math.random() * chaosChance);
-    var chaosCheck4 = Math.floor(Math.random() * chaosChance);
+    chaosCheck1 = Math.floor(Math.random() * chaosChance);
+    chaosCheck2 = Math.floor(Math.random() * chaosChance);
+    chaosCheck3 = Math.floor(Math.random() * chaosChance);
+    chaosCheck4 = Math.floor(Math.random() * chaosChance);
+
+    realChaosCheck = Math.floor(Math.random() * realChaosChance);
+    speciesCheck = document.getElementById("speciesToggle").checked;
 
     var newDiv = document.createElement("div");
     newDiv.setAttribute('class','bear');
+
+    // Species
+        if (speciesCheck == true) {
+            speciesTemplate += species[Math.floor(Math.random() * species.length)];
+
+            newDiv.appendChild(document.createTextNode(speciesTemplate));
+            newDiv.appendChild(document.createElement("br"));
+            newDiv.appendChild(document.createElement("br"));
+        }
 
     // Preoccupations
         if (chaosCheck1 > 0) {
@@ -394,18 +773,27 @@ function fillTemplate() {
         newDiv.appendChild(document.createElement("br"));
     
     // Prejudice
-        prejudiceTemplate += (prejudices[Math.floor(Math.random() * prejudices.length)]);
+        prejudiceTemplate += prejudices[Math.floor(Math.random() * prejudices.length)];
         newDiv.appendChild(document.createTextNode(prejudiceTemplate));
         newDiv.appendChild(document.createElement("br"));
     
     // Purpose
-        purposeTemplate += (purposes[Math.floor(Math.random() * purposes.length)]);
+        purposeTemplate += purposes[Math.floor(Math.random() * purposes.length)];
         newDiv.appendChild(document.createTextNode(purposeTemplate));
         newDiv.appendChild(document.createElement("br"));
 
     // Perspective
-        perspectiveTemplate += (perspectives[Math.floor(Math.random() * perspectives.length)]);
+        perspectiveTemplate += perspectives[Math.floor(Math.random() * perspectives.length)];
         newDiv.appendChild(document.createTextNode(perspectiveTemplate));
+
+    // Filling
+        if (realChaosCheck == 0) {
+            fillingTemplate += fillings[Math.floor(Math.random() * fillings.length)];
+
+            newDiv.appendChild(document.createElement("br"));
+            newDiv.appendChild(document.createElement("br"));
+            newDiv.appendChild(document.createTextNode(fillingTemplate));
+        }
 
     document.body.insertBefore(newDiv, document.getElementById("footer"))
     document.body.insertBefore(document.createElement("br"), document.getElementById("footer"));
