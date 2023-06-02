@@ -19,6 +19,10 @@ input {
     font-family: monospace;
 }
 
+table, th, td {
+    border: none;
+}
+
 .shell {
     padding-top: 7vh;
     padding-bottom: 3vh;
@@ -28,6 +32,51 @@ input {
     display: block;
     margin: auto;
     margin-bottom: 25px;
+}
+
+.collapsible {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    width: 200px;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    background-color: #E0E0E0;
+    font-family: 'lora';
+    padding: 10px;
+}
+
+.subspecies {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 120px;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    background-color: #E0E0E0;
+    font-family: 'lora';
+    font-weight: bold;
+    padding: 16px;
+}
+
+.active, .collapsible:hover {
+    background-color: #404040;
+    color: #E0E0E0;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #181818;
+}
+
+.centered {
+    margin-left:auto;
+    margin-right: auto;
 }
 
 .bear {

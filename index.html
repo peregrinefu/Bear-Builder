@@ -18,8 +18,45 @@
             <div class="inputContainer">
                 <label style="font-size:16px" for="speciesToggle">Include Species</label>
                 <input type="checkbox" id="speciesToggle" name="speciesToggle" value="species">
+
+                <button type="button" class="collapsible">Filter Species by Type</button>
+                <div class="content">
+                    <table class="centered">
+                        <tr>
+                            <td><button type="button" class="subspecies active">Ursines</button></td>
+                            <td><button type="button" class="subspecies">Lagomorphs</button></td>
+                            <td><button type="button" class="subspecies">Amphibians</button></td>
+                            <td><button type="button" class="subspecies">Bovines</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="subspecies">Cervidae</button></td>
+                            <td><button type="button" class="subspecies">Canines</button></td>
+                            <td><button type="button" class="subspecies">Felines</button></td>
+                            <td><button type="button" class="subspecies">Ambystomatidae</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="subspecies">Unicorns</button></td>
+                            <td><button type="button" class="subspecies">Reptiles</button></td>
+                            <td><button type="button" class="subspecies">Aquatic</button></td>
+                            <td><button type="button" class="subspecies">Misc. Animals</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="subspecies">Misc. TV/Film</button></td>
+                            <td><button type="button" class="subspecies">Pokémon</button></td>
+                            <td><button type="button" class="subspecies">Honey Girls</button></td>
+                            <td><button type="button" class="subspecies">Star Wars</button></td>
+                        </tr>
+                        <tr>
+                            <td><button type="button" class="subspecies">Harry Potter</button></td>
+                            <td><button type="button" class="subspecies">Video Games</button></td>
+                            <td><button type="button" class="subspecies">Disney</button></td>
+                            <td><button type="button" class="subspecies">My Little Pony</button></td>
+                        </tr>
+                    </table>
+                    <button type="button" class="subspecies">Terrible</button>
+                </div>
             </div>
-            
+
             <div class="inputContainer">
                 <input type="button" value="Go!" onclick="generateBears()">
             </div>
@@ -27,4 +64,5 @@
 
         <div class="footer" id="footer">© 2023 Peregrine Fu</div>
     </body>
+    <script src="js/buttonManager.js"></script>
 </html>
