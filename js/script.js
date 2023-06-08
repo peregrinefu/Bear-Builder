@@ -740,7 +740,9 @@ const preoccupations    = [ "Hygiene",
                             "Money",
                             "Feng Shui",
                             "Stacking",
-                            "Retirement"];
+                            "Retirement",
+                            "Fishing",
+                            "Family"];
 const phobias           = [ "Darkness",
                             "Enclosed spaces",
                             "Stairs",
@@ -989,7 +991,8 @@ const fillings          = [ "Rice",
                             "Paperclips",
                             "Assorted vines and ivies",
                             "Water-filled bladders",
-                            "A purpose-built endoskeleton"];
+                            "A purpose-built endoskeleton",
+                            "A single live rat"];
 
 var preoccupationsTemplate;
 var phobiasTemplate;
