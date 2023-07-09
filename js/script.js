@@ -742,7 +742,12 @@ const preoccupations    = [ "Hygiene",
                             "Stacking",
                             "Retirement",
                             "Fishing",
-                            "Family"];
+                            "Family",
+                            "Minerals",
+                            "Vegetables",
+                            "Safety",
+                            "Profit",
+                            "Parenthood"];
 const phobias           = [ "Darkness",
                             "Enclosed spaces",
                             "Stairs",
@@ -802,7 +807,8 @@ const phobias           = [ "Darkness",
                             "Betrayal",
                             "Responsibility",
                             "Contaminants",
-                            "Glass"];
+                            "Glass",
+                            "Beasties"];
 const prejudices        = [ "Stuffies",
                             "Enfleshed",
                             "Small animals",
@@ -904,7 +910,8 @@ const purposes          = [ "Recover the Creator.",
                             "Learn a Truth.",
                             "Spread a Lie.",
                             "Live Happily ever After.",
-                            "Watch over Them."];
+                            "Watch over Them.",
+                            "Tame a beast."];
 const perspectives      = [ "a terrifying place, with monsters around every corner.",
                             "a stage, where anyone can shine!",
                             "a big ol' sandwich.",
@@ -951,7 +958,8 @@ const demeanors         = [ "Cheerful",
                             "Jockish",
                             "Jocular",
                             "Obnoxious",
-                            "Itchy"];
+                            "Itchy",
+                            "Wheezy"];
 const fillings          = [ "Rice",
                             "Sponges",
                             "Beans",
@@ -992,7 +1000,8 @@ const fillings          = [ "Rice",
                             "Assorted vines and ivies",
                             "Water-filled bladders",
                             "A purpose-built endoskeleton",
-                            "A single live rat"];
+                            "A single live rat",
+                            "Peanut shells"];
 
 var preoccupationsTemplate;
 var phobiasTemplate;
